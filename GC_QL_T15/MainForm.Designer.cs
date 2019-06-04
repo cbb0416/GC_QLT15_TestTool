@@ -37,6 +37,7 @@
             this.textBox_HundredKilometersOfEnergyConsumption = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox37 = new System.Windows.Forms.CheckBox();
             this.button_0x05Send = new System.Windows.Forms.Button();
             this.textBox_0x05Send = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -79,6 +80,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.checkBox38 = new System.Windows.Forms.CheckBox();
             this.button_0x07Send = new System.Windows.Forms.Button();
             this.textBox_0x07Send = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -156,6 +158,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.button_0x0CSend = new System.Windows.Forms.Button();
             this.textBox_0x0CSend = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -231,8 +234,6 @@
             this.radioButton37 = new System.Windows.Forms.RadioButton();
             this.button_0x0DSend = new System.Windows.Forms.Button();
             this.textBox_0x0DSend = new System.Windows.Forms.TextBox();
-            this.checkBox37 = new System.Windows.Forms.CheckBox();
-            this.checkBox38 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -351,6 +352,17 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "0x05";
+            // 
+            // checkBox37
+            // 
+            this.checkBox37.AutoSize = true;
+            this.checkBox37.Location = new System.Drawing.Point(149, 50);
+            this.checkBox37.Name = "checkBox37";
+            this.checkBox37.Size = new System.Drawing.Size(48, 16);
+            this.checkBox37.TabIndex = 18;
+            this.checkBox37.Text = "隐藏";
+            this.checkBox37.UseVisualStyleBackColor = true;
+            this.checkBox37.CheckedChanged += new System.EventHandler(this.Msg0x05Encode);
             // 
             // button_0x05Send
             // 
@@ -816,6 +828,17 @@
             this.groupBox8.TabIndex = 23;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "0x07";
+            // 
+            // checkBox38
+            // 
+            this.checkBox38.AutoSize = true;
+            this.checkBox38.Location = new System.Drawing.Point(239, 46);
+            this.checkBox38.Name = "checkBox38";
+            this.checkBox38.Size = new System.Drawing.Size(42, 16);
+            this.checkBox38.TabIndex = 23;
+            this.checkBox38.Text = "---";
+            this.checkBox38.UseVisualStyleBackColor = true;
+            this.checkBox38.CheckedChanged += new System.EventHandler(this.Msg0x07Encode);
             // 
             // button_0x07Send
             // 
@@ -1602,6 +1625,7 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.radioButton12);
             this.groupBox15.Controls.Add(this.button_0x0CSend);
             this.groupBox15.Controls.Add(this.textBox_0x0CSend);
             this.groupBox15.Controls.Add(this.label34);
@@ -1634,6 +1658,17 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "0x0C";
             // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Checked = true;
+            this.radioButton12.Location = new System.Drawing.Point(13, 22);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(47, 16);
+            this.radioButton12.TabIndex = 23;
+            this.radioButton12.Text = "消影";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
             // button_0x0CSend
             // 
             this.button_0x0CSend.Location = new System.Drawing.Point(236, 287);
@@ -1664,7 +1699,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(138, 26);
+            this.label33.Location = new System.Drawing.Point(138, 47);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(41, 12);
             this.label33.TabIndex = 21;
@@ -1713,7 +1748,6 @@
             this.radioButton32.Name = "radioButton32";
             this.radioButton32.Size = new System.Drawing.Size(71, 16);
             this.radioButton32.TabIndex = 16;
-            this.radioButton32.TabStop = true;
             this.radioButton32.Text = "故障有效";
             this.radioButton32.UseVisualStyleBackColor = true;
             this.radioButton32.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1721,11 +1755,10 @@
             // radioButton31
             // 
             this.radioButton31.AutoSize = true;
-            this.radioButton31.Location = new System.Drawing.Point(159, 155);
+            this.radioButton31.Location = new System.Drawing.Point(159, 176);
             this.radioButton31.Name = "radioButton31";
             this.radioButton31.Size = new System.Drawing.Size(83, 16);
             this.radioButton31.TabIndex = 15;
-            this.radioButton31.TabStop = true;
             this.radioButton31.Text = "气压低报警";
             this.radioButton31.UseVisualStyleBackColor = true;
             this.radioButton31.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1733,11 +1766,10 @@
             // radioButton30
             // 
             this.radioButton30.AutoSize = true;
-            this.radioButton30.Location = new System.Drawing.Point(159, 133);
+            this.radioButton30.Location = new System.Drawing.Point(159, 154);
             this.radioButton30.Name = "radioButton30";
             this.radioButton30.Size = new System.Drawing.Size(83, 16);
             this.radioButton30.TabIndex = 14;
-            this.radioButton30.TabStop = true;
             this.radioButton30.Text = "气压高报警";
             this.radioButton30.UseVisualStyleBackColor = true;
             this.radioButton30.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1745,11 +1777,10 @@
             // radioButton29
             // 
             this.radioButton29.AutoSize = true;
-            this.radioButton29.Location = new System.Drawing.Point(159, 111);
+            this.radioButton29.Location = new System.Drawing.Point(159, 132);
             this.radioButton29.Name = "radioButton29";
             this.radioButton29.Size = new System.Drawing.Size(71, 16);
             this.radioButton29.TabIndex = 13;
-            this.radioButton29.TabStop = true;
             this.radioButton29.Text = "系统故障";
             this.radioButton29.UseVisualStyleBackColor = true;
             this.radioButton29.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1757,11 +1788,10 @@
             // radioButton28
             // 
             this.radioButton28.AutoSize = true;
-            this.radioButton28.Location = new System.Drawing.Point(159, 89);
+            this.radioButton28.Location = new System.Drawing.Point(159, 110);
             this.radioButton28.Name = "radioButton28";
             this.radioButton28.Size = new System.Drawing.Size(71, 16);
             this.radioButton28.TabIndex = 12;
-            this.radioButton28.TabStop = true;
             this.radioButton28.Text = "高温报警";
             this.radioButton28.UseVisualStyleBackColor = true;
             this.radioButton28.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1769,11 +1799,10 @@
             // radioButton27
             // 
             this.radioButton27.AutoSize = true;
-            this.radioButton27.Location = new System.Drawing.Point(159, 67);
+            this.radioButton27.Location = new System.Drawing.Point(159, 88);
             this.radioButton27.Name = "radioButton27";
             this.radioButton27.Size = new System.Drawing.Size(71, 16);
             this.radioButton27.TabIndex = 11;
-            this.radioButton27.TabStop = true;
             this.radioButton27.Text = "快速漏气";
             this.radioButton27.UseVisualStyleBackColor = true;
             this.radioButton27.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1781,11 +1810,10 @@
             // radioButton26
             // 
             this.radioButton26.AutoSize = true;
-            this.radioButton26.Location = new System.Drawing.Point(159, 45);
+            this.radioButton26.Location = new System.Drawing.Point(159, 66);
             this.radioButton26.Name = "radioButton26";
             this.radioButton26.Size = new System.Drawing.Size(119, 16);
             this.radioButton26.TabIndex = 10;
-            this.radioButton26.TabStop = true;
             this.radioButton26.Text = "传感器电池电量低";
             this.radioButton26.UseVisualStyleBackColor = true;
             this.radioButton26.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1793,11 +1821,10 @@
             // radioButton25
             // 
             this.radioButton25.AutoSize = true;
-            this.radioButton25.Location = new System.Drawing.Point(13, 265);
+            this.radioButton25.Location = new System.Drawing.Point(140, 22);
             this.radioButton25.Name = "radioButton25";
             this.radioButton25.Size = new System.Drawing.Size(71, 16);
             this.radioButton25.TabIndex = 9;
-            this.radioButton25.TabStop = true;
             this.radioButton25.Text = "水泵故障";
             this.radioButton25.UseVisualStyleBackColor = true;
             this.radioButton25.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1805,11 +1832,10 @@
             // radioButton24
             // 
             this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(13, 238);
+            this.radioButton24.Location = new System.Drawing.Point(13, 261);
             this.radioButton24.Name = "radioButton24";
             this.radioButton24.Size = new System.Drawing.Size(71, 16);
             this.radioButton24.TabIndex = 8;
-            this.radioButton24.TabStop = true;
             this.radioButton24.Text = "DCDC故障";
             this.radioButton24.UseVisualStyleBackColor = true;
             this.radioButton24.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1817,11 +1843,10 @@
             // radioButton23
             // 
             this.radioButton23.AutoSize = true;
-            this.radioButton23.Location = new System.Drawing.Point(13, 211);
+            this.radioButton23.Location = new System.Drawing.Point(13, 234);
             this.radioButton23.Name = "radioButton23";
             this.radioButton23.Size = new System.Drawing.Size(83, 16);
             this.radioButton23.TabIndex = 7;
-            this.radioButton23.TabStop = true;
             this.radioButton23.Text = "充电机故障";
             this.radioButton23.UseVisualStyleBackColor = true;
             this.radioButton23.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1829,11 +1854,10 @@
             // radioButton22
             // 
             this.radioButton22.AutoSize = true;
-            this.radioButton22.Location = new System.Drawing.Point(13, 184);
+            this.radioButton22.Location = new System.Drawing.Point(13, 207);
             this.radioButton22.Name = "radioButton22";
             this.radioButton22.Size = new System.Drawing.Size(71, 16);
             this.radioButton22.TabIndex = 6;
-            this.radioButton22.TabStop = true;
             this.radioButton22.Text = "动转故障";
             this.radioButton22.UseVisualStyleBackColor = true;
             this.radioButton22.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1841,11 +1865,10 @@
             // radioButton21
             // 
             this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(13, 157);
+            this.radioButton21.Location = new System.Drawing.Point(13, 180);
             this.radioButton21.Name = "radioButton21";
             this.radioButton21.Size = new System.Drawing.Size(65, 16);
             this.radioButton21.TabIndex = 5;
-            this.radioButton21.TabStop = true;
             this.radioButton21.Text = "BMS故障";
             this.radioButton21.UseVisualStyleBackColor = true;
             this.radioButton21.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1853,11 +1876,10 @@
             // radioButton20
             // 
             this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(13, 130);
+            this.radioButton20.Location = new System.Drawing.Point(13, 153);
             this.radioButton20.Name = "radioButton20";
             this.radioButton20.Size = new System.Drawing.Size(65, 16);
             this.radioButton20.TabIndex = 4;
-            this.radioButton20.TabStop = true;
             this.radioButton20.Text = "MCU故障";
             this.radioButton20.UseVisualStyleBackColor = true;
             this.radioButton20.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1865,11 +1887,10 @@
             // radioButton19
             // 
             this.radioButton19.AutoSize = true;
-            this.radioButton19.Location = new System.Drawing.Point(13, 103);
+            this.radioButton19.Location = new System.Drawing.Point(13, 126);
             this.radioButton19.Name = "radioButton19";
             this.radioButton19.Size = new System.Drawing.Size(65, 16);
             this.radioButton19.TabIndex = 3;
-            this.radioButton19.TabStop = true;
             this.radioButton19.Text = "VCU故障";
             this.radioButton19.UseVisualStyleBackColor = true;
             this.radioButton19.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1877,11 +1898,10 @@
             // radioButton18
             // 
             this.radioButton18.AutoSize = true;
-            this.radioButton18.Location = new System.Drawing.Point(13, 76);
+            this.radioButton18.Location = new System.Drawing.Point(13, 99);
             this.radioButton18.Name = "radioButton18";
             this.radioButton18.Size = new System.Drawing.Size(83, 16);
             this.radioButton18.TabIndex = 2;
-            this.radioButton18.TabStop = true;
             this.radioButton18.Text = "安全带未系";
             this.radioButton18.UseVisualStyleBackColor = true;
             this.radioButton18.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1889,11 +1909,10 @@
             // radioButton17
             // 
             this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(13, 49);
+            this.radioButton17.Location = new System.Drawing.Point(13, 72);
             this.radioButton17.Name = "radioButton17";
             this.radioButton17.Size = new System.Drawing.Size(71, 16);
             this.radioButton17.TabIndex = 1;
-            this.radioButton17.TabStop = true;
             this.radioButton17.Text = "车门未关";
             this.radioButton17.UseVisualStyleBackColor = true;
             this.radioButton17.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -1901,12 +1920,10 @@
             // radioButton16
             // 
             this.radioButton16.AutoSize = true;
-            this.radioButton16.Checked = true;
-            this.radioButton16.Location = new System.Drawing.Point(13, 22);
+            this.radioButton16.Location = new System.Drawing.Point(13, 45);
             this.radioButton16.Name = "radioButton16";
             this.radioButton16.Size = new System.Drawing.Size(71, 16);
             this.radioButton16.TabIndex = 0;
-            this.radioButton16.TabStop = true;
             this.radioButton16.Text = "一路平安";
             this.radioButton16.UseVisualStyleBackColor = true;
             this.radioButton16.CheckedChanged += new System.EventHandler(this.Msg0x0CEncode);
@@ -2499,28 +2516,6 @@
             this.textBox_0x0DSend.Size = new System.Drawing.Size(224, 21);
             this.textBox_0x0DSend.TabIndex = 23;
             // 
-            // checkBox37
-            // 
-            this.checkBox37.AutoSize = true;
-            this.checkBox37.Location = new System.Drawing.Point(149, 50);
-            this.checkBox37.Name = "checkBox37";
-            this.checkBox37.Size = new System.Drawing.Size(48, 16);
-            this.checkBox37.TabIndex = 18;
-            this.checkBox37.Text = "隐藏";
-            this.checkBox37.UseVisualStyleBackColor = true;
-            this.checkBox37.CheckedChanged += new System.EventHandler(this.Msg0x05Encode);
-            // 
-            // checkBox38
-            // 
-            this.checkBox38.AutoSize = true;
-            this.checkBox38.Location = new System.Drawing.Point(239, 46);
-            this.checkBox38.Name = "checkBox38";
-            this.checkBox38.Size = new System.Drawing.Size(42, 16);
-            this.checkBox38.TabIndex = 23;
-            this.checkBox38.Text = "---";
-            this.checkBox38.UseVisualStyleBackColor = true;
-            this.checkBox38.CheckedChanged += new System.EventHandler(this.Msg0x07Encode);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2538,7 +2533,7 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
-            this.Text = "速显微电子-群龙T15测试 V1.1";
+            this.Text = "速显微电子-群龙T15测试 V1.2";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2793,6 +2788,7 @@
         private System.Windows.Forms.CheckBox checkBox35;
         private System.Windows.Forms.CheckBox checkBox37;
         private System.Windows.Forms.CheckBox checkBox38;
+        private System.Windows.Forms.RadioButton radioButton12;
 
     }
 }
