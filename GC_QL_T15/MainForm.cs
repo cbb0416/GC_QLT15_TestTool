@@ -1279,7 +1279,7 @@ namespace GC_QL_T15
             {
                 dat[1] &= 0xFB;
             }
-
+            /*
             if (checkBox29.Checked == true)
             {
                 dat[1] |= 0x08;
@@ -1287,6 +1287,50 @@ namespace GC_QL_T15
             else
             {
                 dat[1] &= 0xF7;
+            }*/
+            if (radioButton54.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x00;
+            }
+            else if (radioButton53.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x08;
+            }
+            else if (radioButton52.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x10;
+            }
+            else if (radioButton51.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x18;
+            }
+            else if (radioButton58.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x20;
+            }
+            else if (radioButton57.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x28;
+            }
+            else if (radioButton56.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x30;
+            }
+            else if (radioButton55.Checked == true)
+            {
+                dat[1] &= 0xC7;
+                dat[1] |= 0x38;
+            }
+            else
+            {
+                dat[1] &= 0xC7;
             }
 
             if (radioButton33.Checked == true)
